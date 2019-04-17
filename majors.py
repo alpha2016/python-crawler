@@ -71,7 +71,7 @@ if __name__ == '__main__':
             charset = "utf8"
         )
     cur = connect.cursor()
-    # 爬取的专业信息
+    # 爬取的专业信息数组
     majors = ['人物形象设计']
     for major in majors:
         get_data(major)
@@ -79,14 +79,14 @@ connect.close()
 
 # 对应表结构
 # CREATE TABLE `majors` (`id` int(11) NOT NULL AUTO_INCREMENT,
-#     `keyword` varchar(50) DEFAULT NULL,
-#     `province` varchar(50) DEFAULT NULL,
-#     `code` varchar(50) DEFAULT NULL,
-#     `name` varchar(50) DEFAULT NULL,
-#     `school_code` varchar(50) DEFAULT NULL,
-#     `school_name` varchar(255) DEFAULT NULL,
-#     `years_limit` tinyint(3) unsigned DEFAULT NULL,
-#     `remark` varchar(255) DEFAULT NULL,
+#     `keyword` varchar(50) DEFAULT NULL COMMENT '关键字',
+#     `province` varchar(50) DEFAULT NULL COMMENT '省份信息',
+#     `code` varchar(50) DEFAULT NULL COMMENT '专业代码',
+#     `name` varchar(50) DEFAULT NULL COMMENT '专业名称',
+#     `school_code` varchar(50) DEFAULT NULL COMMENT '学校代码',
+#     `school_name` varchar(255) DEFAULT NULL COMMENT '学校名称',
+#     `years_limit` tinyint(3) unsigned DEFAULT NULL COMMENT '年限',
+#     `remark` varchar(255) DEFAULT NULL COMMENT '备注',
 #     `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 #     PRIMARY KEY(`id`) USING BTREE
-# ) ENGINE = InnoDB AUTO_INCREMENT = 119 DEFAULT CHARSET = utf8mb4 ROW_FORMAT = DYNAMIC
+# ) ENGINE = InnoDB AUTO_INCREMENT = 237 DEFAULT CHARSET = utf8mb4 ROW_FORMAT = DYNAMIC
